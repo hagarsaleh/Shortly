@@ -7,7 +7,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/main.css">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  <script>
+    let menu = document.getElementById('menu-icon');
+    menu.addEventListener('click', function(){
 
+    })
+  </script>
  
 </head>
 <body>
@@ -20,18 +25,22 @@
         <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
         <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
       </svg>
+      
 
     </div>
+
     <h1 class="nav-label">Shortly</h1>
     
     <input type="checkbox" id="menu">
-    <ul class="nav-menue"> 
+    <ul class="nav-menue-mobile "> 
       
       <li>  Features</li>
       <li> Pricing</li>
-      <li> Resources</li>
-      <button>Login</button>
-      <button>Sign Up</button>
+      <li>Resources</li>
+      <li  id="border"></li>
+      
+      <a>Login</a>
+      <a>Sign Up</a>
     </ul>
     
   </nav>
@@ -40,11 +49,12 @@
 
     <div class="about">
       <img class="about-img" src="images/illustration-working.svg" alt="">
+      <div class="about-text">
       <h1>  More than just shorter links </h1>
       <p> Build your brand’s recognition and get detailed insights 
         on how your links are performing. </p>
       <a class="about-button" href="">Get Started</a>
-      
+      </div>
     </div>
 
     <div class="input">

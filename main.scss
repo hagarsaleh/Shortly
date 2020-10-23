@@ -16,7 +16,7 @@ $VeryDarkViolet: hsl(260, 8%, 14%);
 
 @font-face{
     font-family: 'Poppins';
-    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
 
 }
 @font-face{
@@ -37,7 +37,6 @@ margin: 0;
 font-size: 3vw;
 h1,h2,h3,p,li{
     font-family: 'Poppins';
-    text-align: center;
     color: $VeryDarkBlue;
 }
 h1{
@@ -77,8 +76,78 @@ a{
         font-size: 1.5em;
         padding:4% 2%;
         text-decoration:none;
+        text-align: center;
         
         
+}
+nav{
+.nav-menue-mobile {
+    
+    padding:0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: none;   
+    margin-right: auto;
+    margin-left:auto;
+    flex-direction: column;
+    max-width: 100%;
+    width: 93vw;
+    border-radius: 15px;;
+    position: absolute;
+    z-index: 3;
+    right: 1%;
+    left: 1%;
+    align-self: center;
+    align-content: center;
+    
+   // display:none;
+    background-color: #3b3054;
+    #border{
+        padding-bottom: 2%;
+        width: 60%;
+        align-self: center;
+        border-bottom: .5px solid $GrayishViolet;
+    }
+    li{
+        color:white;
+        font-family: "Poppins-bold";
+        padding: 3%;
+        margin:2%;
+        padding-left: 8%;
+        padding-right:8%;
+        font-size:1.5em;
+    }
+    a{
+        background-color:#3b3054 ;
+        font-size: 1.5em;
+        margin:2%
+    }
+    
+        a:hover, a:focus{  
+        background-color:$Cyan;
+       font-family: "Poppins";
+        border:0 ;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family: "bold";
+        font-size: 1.5em;
+        padding:4% 2%;
+        text-decoration:none;
+        text-align: center;
+        margin: 4%;
+        margin-left: 8%;
+        margin-right: 9%;
+        font-size: 1.5em;
+        border-radius: 100px;
+}
+    
+
+}
+        .show{
+            display: flex;
+        }
+
 }
 .about-button {
 
@@ -100,11 +169,12 @@ ul{
     list-style: none;
     
 }
+
 #menu{
     display: none;
 }
 main{
-    
+    text-align: center;
     justify-items: center;
 
 }
@@ -116,8 +186,9 @@ main{
         width: 141%;
         margin-bottom: 3%;
         height: auto;
-        margin-left: 4vw;
-     object-fit: contain;  
+        transform: translateX(4vw);
+        z-index: 1;
+        object-fit: contain;  
 
     }
   
@@ -140,6 +211,8 @@ nav{
     }
     .nav-label{
         text-align: unset;
+        font-family: "Poppins-bold";
+        
 
 }
 }
@@ -264,8 +337,10 @@ footer{
     background-color: $VeryDarkViolet;
     display: flex;
     flex-direction: column;
+    text-align: center;
     ul{
         padding:0;
+      
     }
     h2, li{
         color:white;
@@ -308,6 +383,141 @@ footer{
         padding:2%;
 
     }
+}
+@media (min-width: 1000px){
+    
+    font-size: 1.5vw;
+    h1{
+        font-size: 3.5em;
+    }
+    p{
+        font-size: 1em;
+    }
+    
+    nav{
+        .nav-label{
+           
+            font-family: "Poppins-bold";
+            font-size: 3em;
+    
+    }
+    }
+    .about{
+        display: flex;
+        padding-bottom:3%;
+        overflow-x: hidden;
+        flex-direction: row-reverse;
+
+        .about-text{
+            margin-left:8%;
+
+            text-align: left;
+            h1{
+                margin-bottom: 0;
+            }
+            p,a{
+                margin-left:0;
+            }
+            a{
+                font-size: 1em;
+                padding: 2% 2%;
+                text-decoration: none;
+                margin: 6% 60% 0% 0%;
+            }
+        }
+        .about-img{
+         //   clear: left;
+         width:100%;
+         transform: translateX(9vw);
+        }
+}
+.input{
+    flex-direction: row;
+    padding:1%;
+    font-size: .7em;
+    margin-top: 5%;
+    transform: translateY(-50%);
+    margin-left:8%;
+    margin-right:8%;
+    #shorten{
+        padding: 2%;
+        margin: 2% 1% 2% 1% ;
+   
+        width: 80%;
+    }
+    #input-button{
+        min-width: 12ch;
+        padding:1.5% 1.5%;
+        margin: 2% 1% 2% 1% ;
+
+    }
+}
+.dashboard{
+    padding:8%;
+    height: 40rem;
+    .types{
+        display: flex;
+        justify-content: space-around;
+        
+        margin-top:0;
+       
+        flex-direction: row;
+        font-size: .8em;
+        li{
+            margin:0;
+            width:15rem;
+            h3{
+                font-size: 1em;
+                width:20ch;
+
+            }
+        }
+        li:nth-child(2){
+           transform: translateY(15%);
+        }
+        li:nth-child(3){
+            transform: translateY(30%);
+         }
+    }
+    .types::after{
+      
+        transform: rotate(90deg);
+    }
+}
+.getstart{
+    padding:5%;
+    font-size: 1em;
+    a{
+        min-width: 12ch;
+        margin:0;
+        margin-left: 44%;
+        margin-right: 44%;
+        padding:1.2% 2% 1.2% 2%;
+        font-size: .9em;
+    }
+}
+footer{
+    font-size:.6em;
+    padding:4%;
+    flex-direction: row;
+    justify-content: space-around;
+    .social-media{
+        margin:0;
+    }
+    h2{
+        font-size: 2.5em;
+        margin: 0;
+        margin-right: 5%;
+    }
+    ul {
+        h2{
+            font-size: 1em; 
+            font-family: "Poppins";
+        }
+        margin:0;
+    }
+   
+}
 }
 
 
