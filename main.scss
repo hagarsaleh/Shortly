@@ -401,6 +401,8 @@ footer{
     
     nav{
         margin-bottom:3%;
+        overflow-x: hidden;
+
         display:flex;
         align-items: baseline;
         #menu-icon{
