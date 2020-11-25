@@ -81,6 +81,7 @@ a{
         
 }
 nav{
+    overflow-x: hidden;
 .nav-menue-mobile {
     
     padding:0;
@@ -92,7 +93,7 @@ nav{
     margin-left:auto;
     flex-direction: column;
     max-width: 100%;
-    width: 93vw;
+    width: 90vw;
     border-radius: 15px;;
     position: absolute;
     z-index: 3;
@@ -122,6 +123,8 @@ nav{
         display: flex;
         flex-direction: column;
         font-size: 1em;
+        transform: translateX(-46%);
+
     }
     a{
         background-color:#3b3054 ;
@@ -209,7 +212,8 @@ main{
 nav{
     //background: url(../images/menu.svg) no-repeat left center;
     
-    margin-inline: 7%;
+    margin-right: 8%;
+    margin-left: 8%;
     .nav-menue{
     display:none;
    
