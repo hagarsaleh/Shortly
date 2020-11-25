@@ -150,7 +150,7 @@ body .about .about-img {
   object-fit: contain;
 }
 body nav {
-  margin: 3%;
+  margin-inline: 7%;
 }
 body nav .nav-menue {
   display: none;
@@ -315,14 +315,72 @@ body #attribution a {
     font-size: 1.5vw;
   }
   body h1 {
-    font-size: 3.5em;
+    font-size: 2.8em;
   }
   body p {
     font-size: 1em;
   }
-  body nav .nav-label {
+  body nav {
+    margin-bottom: 3%;
+    display: flex;
+    align-items: baseline;
+  }
+  body nav #menu-icon {
+    display: none;
+  }
+  body nav .nav-menue-mobile {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    background-color: unset;
+    display: flex;
+    flex-direction: row;
+  }
+  body nav .nav-menue-mobile #links {
+    margin: 0;
+    display: flex;
+    align-self: center;
+    position: absolute;
+    right: 0;
+  }
+  body nav .nav-menue-mobile #links a:nth-child(1) {
+    background-color: unset;
+    color: #9e9aa7;
+    transform: translateX(-50%);
+  }
+  body nav .nav-menue-mobile #links a:nth-child(2) {
+    background-color: #2acfcf;
+    border-radius: 35px;
+    border: 0;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
     font-family: "Poppins-bold";
-    font-size: 3em;
+    font-size: 13px;
+    min-width: 7ch;
+    padding: 9px 15px 9px 15px;
+    text-decoration: none;
+  }
+  body nav .nav-menue-mobile li {
+    color: lightgray;
+    font-size: 0.6em;
+    padding: 0;
+    margin: 2%;
+  }
+  body nav .nav-menue-mobile #border {
+    display: none;
+  }
+  body nav .nav-menue-mobile a:nth-child(2) {
+    border-radius: 50px;
+    background-color: #2acfcf;
+    padding: 8px 25px;
+  }
+  body nav .nav-label {
+    font-family: "Poppins-extra-bold";
+    font-size: 1.4em;
+    display: inline;
   }
   body .about {
     display: flex;
@@ -343,6 +401,7 @@ body #attribution a {
   body .about .about-text a {
     font-size: 1em;
     padding: 2% 2%;
+    min-width: 12ch;
     text-decoration: none;
     margin: 6% 60% 0% 0%;
   }
@@ -383,16 +442,17 @@ body #attribution a {
   body .dashboard .types li {
     margin: 0;
     width: 15rem;
+    height: 15rem;
   }
   body .dashboard .types li h3 {
     font-size: 1em;
     width: 20ch;
   }
   body .dashboard .types li:nth-child(2) {
-    transform: translateY(15%);
+    margin-top: 5%;
   }
   body .dashboard .types li:nth-child(3) {
-    transform: translateY(30%);
+    margin-top: 10%;
   }
   body .dashboard .types::after {
     transform: rotate(90deg);
