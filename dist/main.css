@@ -58,6 +58,7 @@ body nav .nav-menue-mobile {
   padding: 0;
   padding-top: 5%;
   padding-bottom: 5%;
+  align-items: center;
   display: none;
   margin-right: auto;
   margin-left: auto;
@@ -88,10 +89,22 @@ body nav .nav-menue-mobile li {
   padding-right: 8%;
   font-size: 1.5em;
 }
+body nav .nav-menue-mobile #links {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+}
 body nav .nav-menue-mobile a {
   background-color: #3b3054;
   font-size: 1.5em;
   margin: 2%;
+}
+body nav .nav-menue-mobile a:nth-last-child(1) {
+  min-width: 7ch;
+  padding: 10% 136% 10% 136%;
+  transform: translateX(-35%);
+  border-radius: 40px;
+  background-color: #2acfcf;
 }
 body nav .nav-menue-mobile a:hover, body nav .nav-menue-mobile a:focus {
   background-color: #2acfcf;
@@ -237,18 +250,6 @@ body .dashboard .types .ulimg::before {
   left: 35%;
   transform: rotate(90deg);
 }
-body .dashboard .types .vertical {
-  /*
-  display: block;
-  content: "";
-  position: relative;
-  border-top: .3rem solid black;
-  width: 4rem;
-  margin: 0 1rem;
-  left: 35%;
-  transform: rotate(90deg);
-  */
-}
 body .getstart {
   padding: 9%;
   font-size: 1em;
@@ -340,6 +341,7 @@ body #attribution a {
   body nav .nav-menue-mobile #links {
     margin: 0;
     display: flex;
+    flex-direction: row;
     align-self: center;
     position: absolute;
     right: 0;
@@ -347,6 +349,7 @@ body #attribution a {
   body nav .nav-menue-mobile #links a:nth-child(1) {
     background-color: unset;
     color: #9e9aa7;
+    font-size: 0.7em;
     transform: translateX(-50%);
   }
   body nav .nav-menue-mobile #links a:nth-child(2) {
@@ -358,10 +361,11 @@ body #attribution a {
     cursor: pointer;
     color: #ffffff;
     font-family: "Poppins-bold";
-    font-size: 13px;
+    font-size: 0.7em;
     min-width: 7ch;
     padding: 9px 15px 9px 15px;
     text-decoration: none;
+    transform: translateX(3%);
   }
   body nav .nav-menue-mobile li {
     color: lightgray;

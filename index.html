@@ -7,12 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/main.css">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-  <script>
-    let menu = document.getElementById('menu-icon');
-    menu.addEventListener('click', function(){
-
-    })
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
 </head>
 <body>
@@ -30,9 +25,8 @@
     </div>
 
     <h1 class="nav-label">Shortly</h1>
-    
-    <input type="checkbox" id="menu">
-    <ul class="nav-menue-mobile "> 
+  
+    <ul class="nav-menue-mobile " id="list"> 
       
       <li>  Features</li>
       <li> Pricing</li>
@@ -163,4 +157,14 @@
     Coded by<a href="#">Hagar</a>.
   </div>
 </body>
+
+<script defer>
+  let menu = document.getElementById('menu-icon');
+  let list=document.getElementById('list');
+  menu.addEventListener('click', function(){  
+    
+    list.classList.toggle("show");
+  
+  })
+</script
 </html>
