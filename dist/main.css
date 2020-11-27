@@ -54,6 +54,10 @@ body a {
   text-decoration: none;
   text-align: center;
 }
+body a:hover {
+  background-color: #9be3e2;
+  cursor: pointer;
+}
 body nav {
   overflow-x: hidden;
 }
@@ -76,6 +80,26 @@ body nav .nav-menue-mobile {
   align-self: center;
   align-content: center;
   background-color: #3b3054;
+  /*
+          a:hover, a:focus{  
+          background-color:$Cyan;
+          font-family: "Poppins";
+          border:0 ;
+          display:inline-block;
+          cursor:pointer;
+          color:#ffffff;
+          font-family: "bold";
+          font-size: 1.5em;
+          padding:4% 2%;
+          text-decoration:none;
+          text-align: center;
+          margin: 4%;
+          margin-left: 8%;
+          margin-right: 9%;
+          font-size: 1.5em;
+          border-radius: 100px;
+  }
+  */
 }
 body nav .nav-menue-mobile #border {
   padding-bottom: 2%;
@@ -96,7 +120,6 @@ body nav .nav-menue-mobile #links {
   display: flex;
   flex-direction: column;
   font-size: 1em;
-  transform: translateX(-46%);
 }
 body nav .nav-menue-mobile a {
   background-color: #3b3054;
@@ -109,24 +132,6 @@ body nav .nav-menue-mobile a:nth-last-child(1) {
   transform: translateX(-35%);
   border-radius: 40px;
   background-color: #2acfcf;
-}
-body nav .nav-menue-mobile a:hover, body nav .nav-menue-mobile a:focus {
-  background-color: #2acfcf;
-  font-family: "Poppins";
-  border: 0;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: "bold";
-  font-size: 1.5em;
-  padding: 4% 2%;
-  text-decoration: none;
-  text-align: center;
-  margin: 4%;
-  margin-left: 8%;
-  margin-right: 9%;
-  font-size: 1.5em;
-  border-radius: 100px;
 }
 body nav .show {
   display: flex;
@@ -174,6 +179,7 @@ body nav .nav-menue {
   display: none;
 }
 body nav #menu-icon {
+  transform: translateY(154%);
   margin: 2.5%;
   float: right;
   height: 2em;
@@ -350,13 +356,20 @@ body #attribution a {
     flex-direction: row;
     align-self: center;
     position: absolute;
-    right: 0;
+    right: 4%;
   }
   body nav .nav-menue-mobile #links a:nth-child(1) {
     background-color: unset;
     color: #9e9aa7;
     font-size: 0.7em;
     transform: translateX(-50%);
+  }
+  body nav .nav-menue-mobile #links a:nth-child(1):hover {
+    background-color: unset;
+    font-family: unset;
+    font-size: 0.7em;
+    color: black;
+    cursor: pointer;
   }
   body nav .nav-menue-mobile #links a:nth-child(2) {
     background-color: #2acfcf;
@@ -373,18 +386,25 @@ body #attribution a {
     text-decoration: none;
     transform: translateX(3%);
   }
+  body nav .nav-menue-mobile #links a:nth-child(2):hover {
+    background-color: #9be3e2;
+  }
   body nav .nav-menue-mobile li {
     color: lightgray;
     font-size: 0.6em;
     padding: 0;
     margin: 2%;
   }
+  body nav .nav-menue-mobile li:hover {
+    color: black;
+    cursor: pointer;
+  }
   body nav .nav-menue-mobile #border {
     display: none;
   }
   body nav .nav-menue-mobile a:nth-child(2) {
     border-radius: 50px;
-    background-color: #2acfcf;
+    background-color: #9be3e2;
     padding: 8px 25px;
   }
   body nav .nav-label {
@@ -487,6 +507,10 @@ body #attribution a {
   }
   body footer .social-media {
     margin: 0;
+  }
+  body footer .social-media li .path:hover {
+    fill: #2acfcf;
+    cursor: pointer;
   }
   body footer h2 {
     font-size: 2.5em;

@@ -1,6 +1,8 @@
 //Primary
 
  $Cyan: hsl(180, 66%, 49%);
+ $LightCyan: #9be3e2;
+
 $DarkViolet: hsl(257, 27%, 26%);
 
 //Secondary
@@ -78,7 +80,10 @@ a{
         text-decoration:none;
         text-align: center;
         
-        
+}
+a:hover{
+    background-color: $LightCyan;
+    cursor: pointer;
 }
 nav{
     overflow-x: hidden;
@@ -119,11 +124,12 @@ nav{
         padding-right:8%;
         font-size:1.5em;
     }
+   
     #links{
         display: flex;
         flex-direction: column;
         font-size: 1em;
-        transform: translateX(-46%);
+      
 
     }
     a{
@@ -139,9 +145,10 @@ nav{
         background-color: #2acfcf;
     }
     
+    /*
         a:hover, a:focus{  
         background-color:$Cyan;
-       font-family: "Poppins";
+        font-family: "Poppins";
         border:0 ;
         display:inline-block;
         cursor:pointer;
@@ -157,6 +164,8 @@ nav{
         font-size: 1.5em;
         border-radius: 100px;
 }
+*/
+
     
 
 }
@@ -219,6 +228,7 @@ nav{
    
 }
     #menu-icon{
+        transform: translateY(154%);
         margin:2.5%;
         float:right;
         height: 2em;
@@ -358,6 +368,7 @@ footer{
         font-size: 1.2em;
         color: $Gray;
     }
+    
     .social-media{
         display: flex;
         flex-direction: row;
@@ -366,6 +377,7 @@ footer{
         li{
             padding:10%;
         }
+       
         margin-left: auto;
         margin-right:auto;
         
@@ -422,12 +434,24 @@ footer{
                 flex-direction: row;
                 align-self: center;
                 position: absolute;
-                right:0;
+                right: 4%;
+
                 a:nth-child(1){
                     background-color: unset;
                     color: $GrayishViolet;
                     font-size: .7em;
                     transform: translateX(-50%);
+
+                }
+                a:nth-child(1):hover{
+                    background-color: unset;
+                    font-family: unset;
+                    font-size: .7em;
+                  //  transform: translateX(-50%);
+                    color:black;
+                    cursor: pointer;
+
+                    
                 }
                 a:nth-child(2){
                     background-color: #2acfcf;
@@ -445,6 +469,11 @@ footer{
                     transform: translateX(3%);
                     
                 }
+                a:nth-child(2):hover{
+                    background-color: $LightCyan;
+                }
+                
+                
 
                 
             }
@@ -454,12 +483,16 @@ footer{
                 padding: 0;
                 margin: 2%;
             }
+            li:hover{
+                color:black;
+                cursor: pointer;
+            }
             #border{
                 display: none;
             }
             a:nth-child(2){
                 border-radius: 50px;
-                background-color: $Cyan;
+                background-color: $LightCyan;
                 padding: 8px 25px;
 
             }
@@ -578,6 +611,16 @@ footer{
     justify-content: space-around;
     .social-media{
         margin:0;
+        
+            
+            li{
+                .path:hover{
+                 fill: $Cyan;
+                 cursor: pointer;
+                }
+            }
+        
+        
     }
     h2{
         font-size: 2.5em;
